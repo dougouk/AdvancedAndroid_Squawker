@@ -38,6 +38,8 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity implements
         LoaderManager.LoaderCallbacks<Cursor> {
 
+    public static final String TAG = MainActivity.class.getSimpleName();
+
     private static String LOG_TAG = MainActivity.class.getSimpleName();
     private static final int LOADER_ID_MESSAGES = 0;
 
@@ -85,6 +87,11 @@ public class MainActivity extends AppCompatActivity implements
 
         // Start the loader
         getSupportLoaderManager().initLoader(LOADER_ID_MESSAGES, null, this);
+
+        Bundle bundle = getIntent().getExtras();
+        if(bundle != null && bundle.containsKey("test")){
+            Log.i(TAG, String.format("Message is %s", bundle.getString("test")));
+        }
 
     }
 
