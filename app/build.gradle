@@ -40,6 +40,11 @@ dependencies {
 
     // Firebase dependency
     compile 'com.google.firebase:firebase-messaging:10.0.1'
+
+
+    compile 'io.reactivex.rxjava2:rxjava:2.1.4'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
 }
 // Apply the Google Services plugin. Make sure to add the google-services.json file in the app
 // folder. You download it from the Firebase console
